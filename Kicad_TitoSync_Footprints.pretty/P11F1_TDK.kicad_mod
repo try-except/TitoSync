@@ -536,4 +536,15 @@
 		(uuid "4151a26e-deda-4287-ae7d-4d1aba983feb")
 	)
 	(embedded_fonts no)
+	(model "C:/Users/simon/Downloads/TPS56637RPAR/TPS56637RPAR.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 -0 -0)
+		)
+	)
 )
