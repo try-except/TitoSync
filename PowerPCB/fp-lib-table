@@ -1,4 +1,4 @@
 (fp_lib_table
   (version 7)
-  (lib (name "Kicad_TitoSync_Footprints")(type "KiCad")(uri "E:/GitRepos/TitoSync/Kicad_TitoSync_Footprints.pretty")(options "")(descr ""))
+  (lib (name "Kicad_TitoSync_Footprints")(type "KiCad")(uri "C:/Users/palop/Desktop/U_pascal/proyecto de titulo/TitoSync/Kicad_TitoSync_Footprints.pretty")(options "")(descr ""))
 )
