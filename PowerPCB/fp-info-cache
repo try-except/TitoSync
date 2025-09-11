@@ -1,4 +1,4 @@
-26638125293853064
+26639882857366172
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -69306,6 +69306,13 @@ FS1003-0600-AL
 0
 17
 17
+Kicad_TitoSync_Footprints
+VQFN21_RYQ_TEX
+
+TPS551892QWRYQRQ1 
+0
+21
+21
 Kicad_TitoSync_Footprints
 fs1003-0600-al
 
