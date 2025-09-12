@@ -1,0 +1,54 @@
+Info: Processing symbol 'C1:WCAP-CSGP_0805_H1.25:WCAP-CSGP_0805_H1.25_R'.
+Info: Processing symbol 'C2:Kicad_TitoSync_Footprints:CAPC2012X127N'.
+Info: Processing symbol 'R7:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R8:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'C3:CL21B106KOQNFNE:CAPC2012X140N'.
+Info: Processing symbol 'C4:Kicad_TitoSync_Footprints:CAPC2012X127N'.
+Info: Processing symbol 'J2:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'U1:Kicad_TitoSync_Footprints:VREG_LM5017MR_NOPB'.
+Info: Processing symbol 'IC1:DRV8411PWPR:PWP0016C-IPC_A'.
+Info: Processing symbol 'IC2:DRV8411PWPR:PWP0016C-IPC_A'.
+Info: Processing symbol 'IC3:DRV8411PWPR:PWP0016C-IPC_A'.
+Info: Processing symbol 'J1:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Total warnings: 9, errors: 0.
+Info: Processing symbol 'J3:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J4:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J5:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J6:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J7:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J8:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J9:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J10:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J11:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J12:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J13:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J14:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J15:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J16:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J17:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J18:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'J19:Kicad_TitoSync_Footprints:SAMESKY_TB0012-508-02GR'.
+Info: Processing symbol 'R1:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R2:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R3:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R4:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R5:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Info: Processing symbol 'R6:Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder'.
+Changed C2 footprint from 'CL21B106KOQNFNE:CAPC2012X140N' to 'Kicad_TitoSync_Footprints:CAPC2012X127N'.
+Updated C2 fields.
+Updated C4 fields.
+Changed C4 footprint from 'CL21B106KOQNFNE:CAPC2012X140N' to 'Kicad_TitoSync_Footprints:CAPC2012X127N'.
+
+
+Warning: No net found for component U1 pad 15 (no pin 15 in symbol).
+Warning: No net found for component U1 pad 10 (no pin 10 in symbol).
+Warning: No net found for component U1 pad 16 (no pin 16 in symbol).
+Warning: No net found for component U1 pad 13 (no pin 13 in symbol).
+Warning: No net found for component U1 pad 11 (no pin 11 in symbol).
+Warning: No net found for component U1 pad 17 (no pin 17 in symbol).
+Warning: No net found for component U1 pad 14 (no pin 14 in symbol).
+Warning: No net found for component U1 pad 12 (no pin 12 in symbol).
+Warning: No net found for component U1 pad 9 (no pin 9 in symbol).
+
+
+Info: Total warnings: 9, errors: 0.
