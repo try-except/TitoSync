@@ -1,4 +1,4 @@
-26639882857366172
+26641641510456290
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -69299,6 +69299,13 @@ solder jumper open
 0
 3
 3
+Kicad_TitoSync_Footprints
+FS1403_TDK
+
+FS1403-5000-AL 
+0
+17
+17
 Kicad_TitoSync_Footprints
 P11F1_TDK
 
