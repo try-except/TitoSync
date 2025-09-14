@@ -52,21 +52,9 @@
 			)
 		)
 	)
+	(clearance 0.025)
+	(zone_connect 2)
 	(attr smd)
-	(fp_poly
-		(pts
-			(xy -0.127 -1.698803) (xy -0.127 -1.1811) (xy -0.1651 -1.1811) (xy -0.1651 1.1811) (xy -0.127 1.1811)
-			(xy -0.127 1.6988) (xy 0.127 1.698803) (xy 0.127 1.1811) (xy 0.1651 1.1811) (xy 0.1651 -1.1811) (xy 0.127 -1.1811)
-			(xy 0.127 -1.698803)
-		)
-		(stroke
-			(width 0)
-			(type solid)
-		)
-		(fill yes)
-		(layer "F.Cu")
-		(uuid "77f758ff-62c2-48f2-83a3-d35747112f79")
-	)
 	(fp_poly
 		(pts
 			(xy -0.127 -1.698803) (xy -0.127 -1.1811) (xy -0.1651 -1.1811) (xy -0.1651 1.1811) (xy -0.127 1.1811)
@@ -551,17 +539,19 @@
 		(at -1.000252 -0.003)
 		(size 0.254 3.4036)
 		(layers "F.Cu" "F.Mask" "F.Paste")
+		(clearance 0.025)
 		(uuid "2ff4b46a-3214-4ac8-88fa-2bdbaacdea61")
 	)
 	(pad "8" smd rect
 		(at -0.500126 -0.003)
 		(size 0.254 3.4036)
 		(layers "F.Cu" "F.Mask" "F.Paste")
+		(clearance 0.025)
 		(uuid "36a1c062-9391-49b5-bf22-b6133f76c959")
 	)
 	(pad "9" smd rect
-		(at 0 -0.003)
-		(size 0.127 0.127)
+		(at 0 -0.000001)
+		(size 0.254 3.397602)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(uuid "982e16ed-28c9-4bed-9d20-ece845302106")
 	)
@@ -569,12 +559,14 @@
 		(at 0.500126 -0.003)
 		(size 0.254 3.4036)
 		(layers "F.Cu" "F.Mask" "F.Paste")
+		(clearance 0.025)
 		(uuid "0cbbbd3f-5c85-4808-8210-93c3e02119d1")
 	)
 	(pad "11" smd rect
 		(at 1.000252 -0.003)
 		(size 0.254 3.4036)
 		(layers "F.Cu" "F.Mask" "F.Paste")
+		(clearance 0.025)
 		(uuid "c2f58492-6f27-4e87-98b6-08296f55af8f")
 	)
 	(pad "12" smd rect
