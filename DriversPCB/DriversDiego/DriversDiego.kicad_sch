@@ -5174,7 +5174,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV8411PWPR:PWP0016C-IPC_A"
+		(property "Footprint" "Kicad_TitoSync_Footprints:PWP0016C-IPC_A"
 			(at 226.06 58.42 0)
 			(effects
 				(font
@@ -8034,7 +8034,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV8411PWPR:PWP0016C-IPC_A"
+		(property "Footprint" "Kicad_TitoSync_Footprints:PWP0016C-IPC_A"
 			(at 95.25 109.22 0)
 			(effects
 				(font
@@ -8441,7 +8441,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "CL21B106KOQNFNE:CAPC2012X140N"
+		(property "Footprint" "Kicad_TitoSync_Footprints:CAPC2012X140N"
 			(at 196.85 31.75 0)
 			(effects
 				(font
@@ -9455,7 +9455,7 @@
 				)
 			)
 		)
-		(property "Footprint" "DRV8411PWPR:PWP0016C-IPC_A"
+		(property "Footprint" "Kicad_TitoSync_Footprints:PWP0016C-IPC_A"
 			(at 219.71 139.7 0)
 			(effects
 				(font
@@ -10286,7 +10286,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "WCAP-CSGP_0805_H1.25:WCAP-CSGP_0805_H1.25_R"
+		(property "Footprint" "Kicad_TitoSync_Footprints:WCAP-CSGP_0805_H1.25_R"
 			(at 114.3 38.1 0)
 			(effects
 				(font

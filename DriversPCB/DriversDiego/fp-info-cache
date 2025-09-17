@@ -1,4 +1,4 @@
-26653942958723535
+26648672390840690
 Audio_Module
 Reverb_BTDR-1H
 Digital Reverberation Unit, http://www.belton.co.kr/inc/downfile.php?seq=17&file=pdf (footprint from http://www.uk-electronic.de/PDF/BTDR-1.pdf)
@@ -2803,13 +2803,6 @@ Buzzer_Beeper
 Speaker_CUI_CMR-1206S-67
 Speaker, 30mW, 300-7000Hz, IP67 face, 12x6x2,25mm, https://www.cuidevices.com/product/resource/cmr-12062s-67.pdf
 speaker CUI
-0
-2
-2
-CL21B106KOQNFNE
-CAPC2012X140N
-
-
 0
 2
 2
@@ -59331,34 +59324,6 @@ ceramic
 0
 3
 3
-DRV8411PWPR
-PWP0016C-IPC_A
-
-
-0
-17
-17
-DRV8411PWPR
-PWP0016C-IPC_B
-
-
-0
-17
-17
-DRV8411PWPR
-PWP0016C-IPC_C
-
-
-0
-17
-17
-DRV8411PWPR
-PWP0016C-MFG
-
-
-0
-29
-29
 Diode_SMD
 D_0201_0603Metric
 Diode SMD 0201 (0603 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://www.vishay.com/docs/20052/crcw0201e3.pdf), generated with kicad-footprint-generator
@@ -69342,6 +69307,13 @@ CAPC2012X127N
 2
 2
 Kicad_TitoSync_Footprints
+CAPC2012X140N
+
+
+0
+2
+2
+Kicad_TitoSync_Footprints
 EXV-9B_KEM
 
 
@@ -69352,6 +69324,13 @@ Kicad_TitoSync_Footprints
 P11F1_TDK
 
 FS1003-0600-AL 
+0
+17
+17
+Kicad_TitoSync_Footprints
+PWP0016C-IPC_A
+
+
 0
 17
 17
@@ -69369,6 +69348,13 @@ VREG_LM5017MR_NOPB
 0
 17
 17
+Kicad_TitoSync_Footprints
+WCAP-CSGP_0805_H1.25_R
+
+
+0
+2
+2
 LED_SMD
 LED-APA102-2020
 http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf
@@ -106319,13 +106305,6 @@ Varistor
 Varistor_Panasonic_VF
 Panasonic VF series varistor, 6x8mm body, 3.2mm height, https://mediap.industry.panasonic.eu/assets/imported/industrial.panasonic.com/cdbs/www-data/pdf/AWA0000/AWA0000C4.pdf
 Varistor VF
-0
-2
-2
-WCAP-CSGP_0805_H1.25
-WCAP-CSGP_0805_H1.25_R
-
-
 0
 2
 2
