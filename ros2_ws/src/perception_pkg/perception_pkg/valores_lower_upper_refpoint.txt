@@ -1,0 +1,5 @@
+lower: [0, 93, 45]
+upper: [7, 183, 255]
+punto_de_referencia: [356, 58]
+color_a_rastrear: [1, 138, 120]
+ksize: 2
