@@ -22,7 +22,7 @@ class ControlNode(Node):
 
         # Create a control message
         control_msg = String()
-        control_msg.data = f"Processed target {msg.data}"
+        control_msg.data = f"DC,50,S1,5,S2,5,S3,10"
         self.publisher_.publish(control_msg)
         self.get_logger().info(f'Published control_output: {control_msg.data}')
 
