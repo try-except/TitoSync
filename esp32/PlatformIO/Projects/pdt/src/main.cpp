@@ -66,7 +66,7 @@ namespace
     const int PWM_RES_BITS = 8;          // 8-bit resolution -> duty 0..255
     const int PWM_MAX_DUTY = (1 << PWM_RES_BITS) - 1; // 255
 
-    // ledc timer and channels
+    // ledc timer and channels for DC
     const ledc_timer_t LEDC_TIMER = LEDC_TIMER_0;
     const ledc_mode_t LEDC_MODE = LEDC_HIGH_SPEED_MODE;
     const int LEDC_TIMER_BIT = PWM_RES_BITS;
@@ -81,12 +81,210 @@ namespace
 
 } // end anonymous namespace
 
+// ---------------- Full-step stepper implementation (DRV8411) ----------------
+namespace
+{
+    // Default PWM config for stepper control
+    static const int STEPPER_PWM_FREQ = 20000; // 20 kHz
+    static const int STEPPER_PWM_RES_BITS = 8; // duty 0..255
+    static const int STEPPER_PWM_MAX = (1 << STEPPER_PWM_RES_BITS) - 1;
+
+    static void configure_ledc_channel(ledc_channel_t ch, gpio_num_t gpio, ledc_timer_t timer, ledc_mode_t mode)
+    {
+        ledc_channel_config_t ch_cfg{};
+        ch_cfg.speed_mode = mode;
+        ch_cfg.channel = ch;
+        ch_cfg.timer_sel = timer;
+        ch_cfg.intr_type = LEDC_INTR_DISABLE;
+        ch_cfg.gpio_num = (int)gpio;
+        ch_cfg.duty = 0;
+        ch_cfg.hpoint = 0;
+        ESP_ERROR_CHECK( ledc_channel_config(&ch_cfg) );
+    }
+
+    struct FullStepper {
+        gpio_num_t ain1_pin;
+        gpio_num_t ain2_pin;
+        gpio_num_t bin1_pin;
+        gpio_num_t bin2_pin;
+
+        ledc_channel_t ch_ain1;
+        ledc_channel_t ch_ain2;
+        ledc_channel_t ch_bin1;
+        ledc_channel_t ch_bin2;
+
+        ledc_timer_t timer;
+        ledc_mode_t mode;
+
+        int default_duty;
+        int step_delay_ms;
+
+        void init()
+        {
+            configure_ledc_channel(ch_ain1, ain1_pin, timer, mode);
+            configure_ledc_channel(ch_ain2, ain2_pin, timer, mode);
+            configure_ledc_channel(ch_bin1, bin1_pin, timer, mode);
+            configure_ledc_channel(ch_bin2, bin2_pin, timer, mode);
+
+            gpio_set_direction(ain1_pin, GPIO_MODE_OUTPUT);
+            gpio_set_direction(ain2_pin, GPIO_MODE_OUTPUT);
+            gpio_set_direction(bin1_pin, GPIO_MODE_OUTPUT);
+            gpio_set_direction(bin2_pin, GPIO_MODE_OUTPUT);
+
+            ledc_set_duty(mode, ch_ain1, 0);  ledc_update_duty(mode, ch_ain1);
+            ledc_set_duty(mode, ch_ain2, 0);  ledc_update_duty(mode, ch_ain2);
+            ledc_set_duty(mode, ch_bin1, 0);  ledc_update_duty(mode, ch_bin1);
+            ledc_set_duty(mode, ch_bin2, 0);  ledc_update_duty(mode, ch_bin2);
+        }
+
+        inline void apply_fast_pwm(ledc_channel_t pwm_ch, ledc_channel_t other_ch, int duty) {
+            ESP_ERROR_CHECK( ledc_set_duty(mode, other_ch, 0) );
+            ESP_ERROR_CHECK( ledc_update_duty(mode, other_ch) );
+
+            ESP_ERROR_CHECK( ledc_set_duty(mode, pwm_ch, duty) );
+            ESP_ERROR_CHECK( ledc_update_duty(mode, pwm_ch) );
+        }
+
+        inline void coast_bridge(ledc_channel_t ch1, ledc_channel_t ch2) {
+            ESP_ERROR_CHECK( ledc_set_duty(mode, ch1, 0) );
+            ESP_ERROR_CHECK( ledc_update_duty(mode, ch1) );
+            ESP_ERROR_CHECK( ledc_set_duty(mode, ch2, 0) );
+            ESP_ERROR_CHECK( ledc_update_duty(mode, ch2) );
+        }
+
+        void step(int steps, int duty_percent = -1) {
+            if (duty_percent < 0) duty_percent = (default_duty * 100) / STEPPER_PWM_MAX;
+            if (duty_percent < 0) duty_percent = 80;
+            if (duty_percent > 100) duty_percent = 100;
+            int duty = (duty_percent * STEPPER_PWM_MAX) / 100;
+
+            int state = 0;
+            int steps_abs = (steps >= 0) ? steps : -steps;
+            int dir = (steps >= 0) ? 1 : -1;
+
+            for (int s = 0; s < steps_abs; ++s) {
+                if (dir > 0) {
+                    state = (state + 1) & 0x3;
+                } else {
+                    state = (state - 1) & 0x3;
+                }
+
+                switch (state) {
+                    case 0:
+                        apply_fast_pwm(ch_ain1, ch_ain2, duty); // A forward
+                        apply_fast_pwm(ch_bin1, ch_bin2, duty); // B forward
+                        break;
+                    case 1:
+                        apply_fast_pwm(ch_ain2, ch_ain1, duty); // A reverse
+                        apply_fast_pwm(ch_bin1, ch_bin2, duty); // B forward
+                        break;
+                    case 2:
+                        apply_fast_pwm(ch_ain2, ch_ain1, duty); // A reverse
+                        apply_fast_pwm(ch_bin2, ch_bin1, duty); // B reverse
+                        break;
+                    case 3:
+                        apply_fast_pwm(ch_ain1, ch_ain2, duty); // A forward
+                        apply_fast_pwm(ch_bin2, ch_bin1, duty); // B reverse
+                        break;
+                }
+
+                vTaskDelay(pdMS_TO_TICKS(step_delay_ms));
+            }
+        }
+    };
+
+        // Example pin/channel assignments — **CHANGE** a estos según tu wiring
+    // Stepper1 - high-speed
+    static FullStepper stepper1 {
+        .ain1_pin = GPIO_NUM_2,
+        .ain2_pin = GPIO_NUM_4,
+        .bin1_pin = GPIO_NUM_16,
+        .bin2_pin = GPIO_NUM_17,
+        .ch_ain1 = LEDC_CHANNEL_2,
+        .ch_ain2 = LEDC_CHANNEL_3,
+        .ch_bin1 = LEDC_CHANNEL_4,
+        .ch_bin2 = LEDC_CHANNEL_5,
+        .timer = LEDC_TIMER_1,
+        .mode = LEDC_HIGH_SPEED_MODE,
+        .default_duty = (STEPPER_PWM_MAX * 80) / 100,
+        .step_delay_ms = 5
+    };
+
+    // Stepper2 - low-speed
+    static FullStepper stepper2 {
+        .ain1_pin = GPIO_NUM_13,
+        .ain2_pin = GPIO_NUM_14,
+        .bin1_pin = GPIO_NUM_12,
+        .bin2_pin = GPIO_NUM_15,
+        .ch_ain1 = LEDC_CHANNEL_0,
+        .ch_ain2 = LEDC_CHANNEL_1,
+        .ch_bin1 = LEDC_CHANNEL_2,
+        .ch_bin2 = LEDC_CHANNEL_3,
+        .timer = LEDC_TIMER_0,
+        .mode = LEDC_LOW_SPEED_MODE,
+        .default_duty = (STEPPER_PWM_MAX * 80) / 100,
+        .step_delay_ms = 5
+    };
+
+    // Stepper3 - low-speed
+    static FullStepper stepper3 {
+        .ain1_pin = GPIO_NUM_21,
+        .ain2_pin = GPIO_NUM_22,
+        .bin1_pin = GPIO_NUM_23,
+        .bin2_pin = GPIO_NUM_25,
+        .ch_ain1 = LEDC_CHANNEL_4,
+        .ch_ain2 = LEDC_CHANNEL_5,
+        .ch_bin1 = LEDC_CHANNEL_6,
+        .ch_bin2 = LEDC_CHANNEL_7,
+        .timer = LEDC_TIMER_1,
+        .mode = LEDC_LOW_SPEED_MODE,
+        .default_duty = (STEPPER_PWM_MAX * 80) / 100,
+        .step_delay_ms = 5
+    };
+
+
+    static void init_steppers()
+    {
+        ledc_timer_config_t timer_cfg{};
+        timer_cfg.duty_resolution = (ledc_timer_bit_t)STEPPER_PWM_RES_BITS;
+        timer_cfg.freq_hz = STEPPER_PWM_FREQ;
+        timer_cfg.clk_cfg = LEDC_AUTO_CLK;
+
+        // --- High-speed timers ---
+        timer_cfg.speed_mode = LEDC_HIGH_SPEED_MODE;
+        timer_cfg.timer_num = stepper1.timer; // e.g., LEDC_TIMER_1
+        ESP_ERROR_CHECK( ledc_timer_config(&timer_cfg) );
+
+        // --- Low-speed timers ---
+        timer_cfg.speed_mode = LEDC_LOW_SPEED_MODE;
+        timer_cfg.timer_num = stepper2.timer; // e.g., LEDC_TIMER_0
+        ESP_ERROR_CHECK( ledc_timer_config(&timer_cfg) );
+
+        timer_cfg.timer_num = stepper3.timer; // e.g., LEDC_TIMER_1
+        ESP_ERROR_CHECK( ledc_timer_config(&timer_cfg) );
+
+        // Initialize stepper channels
+        stepper1.init();
+        stepper2.init();
+        stepper3.init();
+
+        ESP_LOGI(TAG, "steppers initialized (full-step, fast decay default, pwm %d Hz).", STEPPER_PWM_FREQ);
+    }
+
+
+} // end steppers namespace
+
+// ---------------------------------------------------------------------------
+
 extern "C" void app_main()
 {
     ESP_LOGI(TAG, "application started");
 
     // init motor PWM BEFORE creating tasks (so move_DC_motor is ready)
     init_motor_pwm();
+
+    // init steppers (configures timers & channels used by steppers)
+    init_steppers();
 
     // create queue (5 elements, each of size BUF_SIZE bytes for a string)
     m_string_queue = xQueueCreate(5, BUF_SIZE);
@@ -109,21 +307,20 @@ extern "C" void app_main()
     ESP_LOGI(TAG, "\n%s", buffer);
 } // end of app_main
 
-// Empty placeholder functions for steppers
-
+// Empty placeholder functions for steppers were replaced by actual implementations
 void move_stepper1(int steps) {
-    // TODO: implement Stepper 1 control
     ESP_LOGI("motor", "move_stepper1 called with steps=%d", steps);
+    stepper1.step(steps);
 }
 
 void move_stepper2(int steps) {
-    // TODO: implement Stepper 2 control
     ESP_LOGI("motor", "move_stepper2 called with steps=%d", steps);
+    stepper2.step(steps);
 }
 
 void move_stepper3(int steps) {
-    // TODO: implement Stepper 3 control
     ESP_LOGI("motor", "move_stepper3 called with steps=%d", steps);
+    stepper3.step(steps);
 }
 
 // --- MOTOR / PWM implementation ---
