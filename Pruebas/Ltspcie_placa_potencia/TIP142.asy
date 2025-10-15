@@ -1,0 +1,37 @@
+Version 4
+SymbolType CELL
+LINE Normal 60 76 52 84
+LINE Normal 80 96 60 76
+LINE Normal 80 96 52 84
+LINE Normal 56 80 32 64
+LINE Normal 32 80 32 16
+LINE Normal 32 32 80 0
+LINE Normal 32 48 32 48
+LINE Normal -4 12 -12 20
+LINE Normal 16 32 -4 12
+LINE Normal 16 32 -12 20
+LINE Normal -8 16 -32 0
+LINE Normal -32 16 -32 -48
+LINE Normal -32 -32 16 -64
+LINE Normal -32 -16 -80 -16
+LINE Normal 16 48 16 32
+LINE Normal 32 48 16 48
+LINE Normal 16 -80 16 -64
+LINE Normal 80 -80 16 -80
+LINE Normal 80 0 80 -80
+ARC Normal -80 -96 128 112 128 112 128 112
+WINDOW 0 72 32 Left 2
+WINDOW 3 -128 -112 Left 2
+SYMATTR Value TIP142
+SYMATTR Prefix X
+SYMATTR Description NPN Darlington
+SYMATTR ModelFile ./TIP142.spice
+PIN 80 -80 NONE 0
+PINATTR PinName C
+PINATTR SpiceOrder 1
+PIN -80 -16 NONE 0
+PINATTR PinName B
+PINATTR SpiceOrder 2
+PIN 80 96 NONE 0
+PINATTR PinName E
+PINATTR SpiceOrder 3

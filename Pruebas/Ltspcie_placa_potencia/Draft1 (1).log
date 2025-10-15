@@ -1,0 +1,51 @@
+LTspice 24.1.10 for Windows
+Circuit: C:\Users\krasn\OneDrive\Documentos\LTspice\Draft1 (1).net
+Start Time: Wed Oct 15 15:53:20 2025
+solver = Normal
+Maximum thread count: 16
+tnom = 27
+temp = 27
+method = trap
+Direct Newton iteration failed to find .op point.  (Use ".option noopiter" to skip.)
+Starting Gmin stepping
+Gmin = 10
+Gmin = 1.07374
+Gmin = 0.115292
+Gmin = 0.0123794
+Gmin = 0.00132923
+Gmin = 0.000142725
+Gmin = 1.5325e-05
+vernier = 0.5
+vernier = 0.25
+Gmin = 6.17815e-06
+vernier = 0.125
+vernier = 0.166667
+Gmin = 4.78027e-06
+vernier = 0.222222
+vernier = 0.296296
+Gmin = 2.76083e-06
+vernier = 0.395061
+Gmin = 1.17889e-06
+vernier = 0.526748
+vernier = 0.702331
+Gmin = 2.93835e-07
+vernier = 0.936441
+vernier = 1
+Gmin = 3.8517e-08
+Gmin = 4.13573e-09
+Gmin = 4.44071e-10
+Gmin = 4.76818e-11
+Gmin = 5.11979e-12
+Gmin = 5.49733e-13
+Gmin = 0
+Gmin stepping succeeded in finding the operating point.
+
+Total elapsed time: 0.655 seconds.
+
+Files loaded:
+C:\Users\krasn\OneDrive\Documentos\LTspice\Draft1 (1).net
+C:\Users\krasn\AppData\Local\LTspice\lib\cmp\standard.dio
+C:\Users\krasn\AppData\Local\LTspice\lib\cmp\standard.bjt
+C:\Users\krasn\OneDrive\Documentos\LTspice\TIP142.spice
+C:\Users\krasn\OneDrive\Documentos\LTspice\LM358.MOD
+
