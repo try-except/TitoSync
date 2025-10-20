@@ -1393,7 +1393,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C30"
-			(at 0 -1.68 90)
+			(at 0 -1.5 90)
 			(layer "F.SilkS")
 			(uuid "4b025f57-05ec-4909-ae7f-8312dbfd9c8a")
 			(effects
@@ -1618,7 +1618,7 @@
 		(descr "Capacitor SMD 1206 (3216 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C28"
-			(at 0 0 0)
+			(at 0 -1.8 0)
 			(layer "F.SilkS")
 			(uuid "677bd3d3-a5a6-4ea5-b03f-0b4c09a3036c")
 			(effects
@@ -1629,7 +1629,7 @@
 			)
 		)
 		(property "Value" "0.1uF"
-			(at 0 1.85 0)
+			(at 4.2 0 0)
 			(layer "F.Fab")
 			(uuid "91586ff2-956a-4fec-a3ba-b288d7be9dfb")
 			(effects
@@ -7154,7 +7154,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 0 1.65 0)
+			(at -7 -0.066667 0)
 			(layer "F.Fab")
 			(uuid "aeaf1381-8525-4062-be54-9b3dfab8b9bc")
 			(effects
@@ -7587,7 +7587,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C27"
-			(at 0 1.6 270)
+			(at 2.6 0 0)
 			(layer "F.SilkS")
 			(uuid "974f8382-5577-4faa-b5ee-eac392ed2633")
 			(effects
@@ -8962,7 +8962,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 0 1.65 0)
+			(at 1.544669 0.6 0)
 			(layer "F.Fab")
 			(uuid "abaad40a-07d0-4f4d-bc6c-a2b89e4a5da3")
 			(effects
@@ -9843,7 +9843,7 @@
 	(footprint "TestPoint:TestPoint_Keystone_5019_Miniature"
 		(layer "F.Cu")
 		(uuid "6a9f4bc3-5063-4443-a4b1-528ebdda0eda")
-		(at 114.2 123.8)
+		(at 114.4 123.6)
 		(descr "Keystone SMT Miniature Test Point 5019, http://www.keyelco.com/product-pdf.cfm?p=1357")
 		(tags "Test Point")
 		(property "Reference" "TP7"
@@ -10057,7 +10057,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R25"
-			(at 0 1.754513 0)
+			(at 3.4498 0.1 0)
 			(layer "F.SilkS")
 			(uuid "d67da485-27e4-46af-bc2f-bd642c7d5213")
 			(effects
@@ -12218,7 +12218,7 @@
 			)
 		)
 		(property "Value" "15k"
-			(at 0 1.65 0)
+			(at 6.6 0 0)
 			(layer "F.Fab")
 			(uuid "81c10896-a327-4366-adba-2a641d9b1a92")
 			(effects
@@ -13182,7 +13182,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 0 1.65 0)
+			(at 7 0.066667 0)
 			(layer "F.Fab")
 			(uuid "35cfec39-78e6-48fe-aead-e0040c9c2b1f")
 			(effects
@@ -14507,7 +14507,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C31"
-			(at 0 -1.68 0)
+			(at -3.2498 0.034663 0)
 			(layer "F.SilkS")
 			(uuid "166a856b-96fd-4eb4-8e86-88a884e40d5c")
 			(effects
@@ -14518,7 +14518,7 @@
 			)
 		)
 		(property "Value" "0.01uF"
-			(at 0 1.68 0)
+			(at -2.2498 1.434663 0)
 			(layer "F.Fab")
 			(uuid "711ab67e-6ab9-4d2a-9e2b-85b9f053d90e")
 			(effects
@@ -15456,7 +15456,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 0 1.65 0)
+			(at -6.6 0.066666 0)
 			(layer "F.Fab")
 			(uuid "ddf1270b-ea26-4085-9279-e30d269f7cfb")
 			(effects
@@ -15666,7 +15666,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R24"
-			(at 0 -1.65 0)
+			(at 0 -1.4 0)
 			(layer "F.SilkS")
 			(uuid "13606947-3d65-44e4-86b0-fc9db8370564")
 			(effects
@@ -16973,7 +16973,7 @@
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C26"
-			(at 0 -1.6 270)
+			(at 2.6 -0.4 0)
 			(layer "F.SilkS")
 			(uuid "957efb9f-e167-4a22-8d9f-8e3fafce0c52")
 			(effects
@@ -17866,11 +17866,11 @@
 	(footprint "TestPoint:TestPoint_Keystone_5019_Miniature"
 		(layer "F.Cu")
 		(uuid "ce7e20f3-e019-4a10-a6cf-d94353b8c6c9")
-		(at 139.2 121.6 180)
+		(at 193.6 121.4 -90)
 		(descr "Keystone SMT Miniature Test Point 5019, http://www.keyelco.com/product-pdf.cfm?p=1357")
 		(tags "Test Point")
 		(property "Reference" "TP5"
-			(at 0 -2.4 180)
+			(at 0 -2.4 90)
 			(layer "F.SilkS")
 			(uuid "f6b67edb-a7a6-40e5-ac3e-08d34c9315e7")
 			(effects
@@ -17881,7 +17881,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 0 2.25 0)
+			(at 0 2.25 90)
 			(layer "F.Fab")
 			(uuid "6703f080-ea62-4e70-a45d-e7b57aab6d16")
 			(effects
@@ -17892,7 +17892,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 0.02 -2.81 180)
+			(at 0.02 -2.81 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -17905,7 +17905,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 0.02 -2.81 180)
+			(at 0.02 -2.81 270)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
@@ -17934,26 +17934,6 @@
 			(uuid "2c144b76-ec7a-4241-aab0-a03309aed494")
 		)
 		(fp_line
-			(start 2.35 1.45)
-			(end -2.35 1.45)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "8daf77a3-ae40-423c-a0e6-96326e203efc")
-		)
-		(fp_line
-			(start 2.35 -1.45)
-			(end 2.35 1.45)
-			(stroke
-				(width 0.05)
-				(type solid)
-			)
-			(layer "F.CrtYd")
-			(uuid "49148ab3-9aee-4d1d-b451-245058154e04")
-		)
-		(fp_line
 			(start -2.35 1.45)
 			(end -2.35 -1.45)
 			(stroke
@@ -17962,6 +17942,16 @@
 			)
 			(layer "F.CrtYd")
 			(uuid "08920bfa-4650-467b-a383-c2c4183c941e")
+		)
+		(fp_line
+			(start 2.35 1.45)
+			(end -2.35 1.45)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(layer "F.CrtYd")
+			(uuid "8daf77a3-ae40-423c-a0e6-96326e203efc")
 		)
 		(fp_line
 			(start -2.35 -1.45)
@@ -17973,27 +17963,15 @@
 			(layer "F.CrtYd")
 			(uuid "f18df27e-ab6f-40f6-8646-ca9405f80bb1")
 		)
-		(fp_rect
-			(start 0 0.5)
-			(end 1.25 1)
+		(fp_line
+			(start 2.35 -1.45)
+			(end 2.35 1.45)
 			(stroke
-				(width 0.1)
-				(type default)
+				(width 0.05)
+				(type solid)
 			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "015f81d5-b736-442d-9523-35af43beb73c")
-		)
-		(fp_rect
-			(start 0 -1)
-			(end 1.25 -0.5)
-			(stroke
-				(width 0.1)
-				(type default)
-			)
-			(fill no)
-			(layer "F.Fab")
-			(uuid "b9bb1542-3af1-4440-a30a-a8f68e1e4abf")
+			(layer "F.CrtYd")
+			(uuid "49148ab3-9aee-4d1d-b451-245058154e04")
 		)
 		(fp_rect
 			(start -1.25 0.5)
@@ -18007,15 +17985,15 @@
 			(uuid "158a2cf9-9761-4ca0-8df4-2999bae569d6")
 		)
 		(fp_rect
-			(start -1.25 -1)
-			(end 0 -0.5)
+			(start 0 0.5)
+			(end 1.25 1)
 			(stroke
 				(width 0.1)
 				(type default)
 			)
 			(fill no)
 			(layer "F.Fab")
-			(uuid "08031fce-b888-4eaf-9479-a66609732658")
+			(uuid "015f81d5-b736-442d-9523-35af43beb73c")
 		)
 		(fp_rect
 			(start -1.9 -0.5)
@@ -18028,8 +18006,30 @@
 			(layer "F.Fab")
 			(uuid "06a871be-bfb1-4c02-86c5-d0abe1bd850d")
 		)
+		(fp_rect
+			(start -1.25 -1)
+			(end 0 -0.5)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "08031fce-b888-4eaf-9479-a66609732658")
+		)
+		(fp_rect
+			(start 0 -1)
+			(end 1.25 -0.5)
+			(stroke
+				(width 0.1)
+				(type default)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "b9bb1542-3af1-4440-a30a-a8f68e1e4abf")
+		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 0)
+			(at 0 0 90)
 			(layer "F.Fab")
 			(uuid "79502326-b8fd-482d-8f7e-0e3f83c76840")
 			(effects
@@ -18040,7 +18040,7 @@
 			)
 		)
 		(pad "1" smd roundrect
-			(at 0 0 180)
+			(at 0 0 270)
 			(size 3.8 2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.125)
@@ -18312,7 +18312,7 @@
 			)
 		)
 		(property "Value" "100k"
-			(at 0 1.65 90)
+			(at -0.2 -2.8 180)
 			(layer "F.Fab")
 			(uuid "a7d5a8be-dac6-47c0-8eb7-e9b29e0b9d1b")
 			(effects
@@ -18522,7 +18522,7 @@
 		(descr "Keystone SMT Miniature Test Point 5019, http://www.keyelco.com/product-pdf.cfm?p=1357")
 		(tags "Test Point")
 		(property "Reference" "TP8"
-			(at 0 -2.25 0)
+			(at 3.5 1.3 0)
 			(layer "F.SilkS")
 			(uuid "b158d2f9-762c-4d27-8d54-e43f56884c2a")
 			(effects
@@ -18743,7 +18743,7 @@
 			)
 		)
 		(property "Value" "22uF"
-			(at 0 1.68 90)
+			(at 0 1.5 90)
 			(layer "F.Fab")
 			(uuid "06062a99-e259-4cbf-a0bf-999e75e35113")
 			(effects
@@ -20006,7 +20006,7 @@
 			)
 		)
 		(property "Value" "0.01uF"
-			(at 0 1.68 90)
+			(at 2.6 -3.8 180)
 			(layer "F.Fab")
 			(uuid "b475a6b5-e935-4900-b0fa-f715eeec4b78")
 			(effects
@@ -20445,7 +20445,7 @@
 		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "resistor handsolder")
 		(property "Reference" "R17"
-			(at -1.01875 -3.66875 90)
+			(at -0.2 -1.8 90)
 			(layer "F.SilkS")
 			(uuid "fa8c5e88-9ebc-4d8c-a745-e4e1fc54d461")
 			(effects
@@ -20456,7 +20456,7 @@
 			)
 		)
 		(property "Value" "47k"
-			(at 0 1.65 90)
+			(at -2.6 0 180)
 			(layer "F.Fab")
 			(uuid "dc246bf9-d6e2-4f70-a9d7-db86b11f6d33")
 			(effects
@@ -21279,6 +21279,14 @@
 		(uuid "474318af-a945-449b-b062-fb4eec44858f")
 	)
 	(segment
+		(start 114.4 123.6)
+		(end 114.4 118.6)
+		(width 1.4)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "5bfa5cdc-ef0b-4495-9266-b9035bf17ee4")
+	)
+	(segment
 		(start 139.2 121.6)
 		(end 149.8 121.6)
 		(width 1)
@@ -21309,6 +21317,14 @@
 		(layer "F.Cu")
 		(net 2)
 		(uuid "9b0eb64d-9d65-408c-976e-e707007b9f2b")
+	)
+	(segment
+		(start 193.6 121.4)
+		(end 202.6 121.4)
+		(width 1.4)
+		(layer "F.Cu")
+		(net 2)
+		(uuid "a882c9af-cd5f-4ed4-86da-2e00a44291c9")
 	)
 	(segment
 		(start 114.4 118.6)
@@ -25237,6 +25253,42 @@
 		)
 	)
 	(zone
+		(net 2)
+		(net_name "V_BAT-")
+		(layer "F.Cu")
+		(uuid "48687956-4cd7-48c7-bc0d-60a9e96fd5ce")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30000)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 115.1 121.6) (xy 113.7 121.6) (xy 113.4 122.6) (xy 114.4 123.601) (xy 115.4 122.6)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 115.1 121.6) (xy 113.7 121.6) (xy 113.4 122.6) (xy 114.4 123.601) (xy 115.4 122.6)
+			)
+		)
+	)
+	(zone
 		(net 17)
 		(net_name "PG_12")
 		(layer "F.Cu")
@@ -26582,6 +26634,42 @@
 		)
 	)
 	(zone
+		(net 2)
+		(net_name "V_BAT-")
+		(layer "F.Cu")
+		(uuid "85a13b03-bf08-41a6-be5b-058252114a05")
+		(name "$teardrop_padvia$")
+		(hatch none 0.1)
+		(priority 30000)
+		(attr
+			(teardrop
+				(type padvia)
+			)
+		)
+		(connect_pads yes
+			(clearance 0)
+		)
+		(min_thickness 0.0254)
+		(filled_areas_thickness no)
+		(fill yes
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+			(island_removal_mode 1)
+			(island_area_min 10)
+		)
+		(polygon
+			(pts
+				(xy 195.6 122.1) (xy 195.6 120.7) (xy 194.6 120.4) (xy 193.599 121.4) (xy 194.6 122.4)
+			)
+		)
+		(filled_polygon
+			(layer "F.Cu")
+			(pts
+				(xy 195.6 122.1) (xy 195.6 120.7) (xy 194.6 120.4) (xy 193.599 121.4) (xy 194.6 122.4)
+			)
+		)
+	)
+	(zone
 		(net 12)
 		(net_name "Net-(U1A-COMP)")
 		(layer "F.Cu")
@@ -26938,46 +27026,6 @@
 		)
 	)
 	(zone
-		(net 2)
-		(net_name "V_BAT-")
-		(layer "F.Cu")
-		(uuid "970c342c-4edf-4c10-bc44-dc7fdf37be8f")
-		(name "$teardrop_padvia$")
-		(hatch none 0.1)
-		(priority 30003)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(filled_areas_thickness no)
-		(fill yes
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-			(island_removal_mode 1)
-			(island_area_min 10)
-		)
-		(polygon
-			(pts
-				(xy 137.846447 119.53934) (xy 137.13934 120.246447) (xy 137.3 121.114214) (xy 139.200707 121.600707)
-				(xy 139.614214 120.6)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 137.854277 119.544038) (xy 139.605571 120.594814) (xy 139.610902 120.602009) (xy 139.610364 120.609315)
-				(xy 139.204584 121.591322) (xy 139.198258 121.59766) (xy 139.19087 121.598189) (xy 137.307241 121.116067)
-				(xy 137.300076 121.110695) (xy 137.298639 121.106866) (xy 137.14046 120.252497) (xy 137.142323 120.243739)
-				(xy 137.143686 120.2421) (xy 137.839988 119.545798) (xy 137.84826 119.542372)
-			)
-		)
-	)
-	(zone
 		(net 38)
 		(net_name "Net-(U2-ADDR)")
 		(layer "F.Cu")
@@ -27283,45 +27331,6 @@
 				(xy 179.572568 86.497402) (xy 179.569749 86.49579) (xy 179.361146 86.33425) (xy 179.356703 86.326475)
 				(xy 179.359059 86.317835) (xy 179.36114 86.315753) (xy 179.568302 86.15533) (xy 179.575316 86.152884)
 				(xy 179.579282 86.152836)
-			)
-		)
-	)
-	(zone
-		(net 2)
-		(net_name "V_BAT-")
-		(layer "F.Cu")
-		(uuid "a49b41fe-e906-48a7-a106-5918991a6675")
-		(name "$teardrop_padvia$")
-		(hatch none 0.1)
-		(priority 30002)
-		(attr
-			(teardrop
-				(type padvia)
-			)
-		)
-		(connect_pads yes
-			(clearance 0)
-		)
-		(min_thickness 0.0254)
-		(filled_areas_thickness no)
-		(fill yes
-			(thermal_gap 0.5)
-			(thermal_bridge_width 0.5)
-			(island_removal_mode 1)
-			(island_area_min 10)
-		)
-		(polygon
-			(pts
-				(xy 142.1 122.1) (xy 142.1 121.1) (xy 140.945671 120.61903) (xy 139.199 121.6) (xy 140.945671 122.58097)
-			)
-		)
-		(filled_polygon
-			(layer "F.Cu")
-			(pts
-				(xy 140.950921 120.621217) (xy 142.0928 121.097) (xy 142.099119 121.103345) (xy 142.1 121.1078)
-				(xy 142.1 122.092199) (xy 142.096573 122.100472) (xy 142.0928 122.102999) (xy 140.950931 122.578778)
-				(xy 140.941976 122.578797) (xy 140.940702 122.578179) (xy 139.217163 121.610201) (xy 139.211627 121.603162)
-				(xy 139.212691 121.594271) (xy 139.217163 121.589799) (xy 140.940703 120.621819) (xy 140.949593 120.620756)
 			)
 		)
 	)
