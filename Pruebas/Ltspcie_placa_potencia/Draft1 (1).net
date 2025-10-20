@@ -1,0 +1,62 @@
+* D:\GitRepos\TitoSync\Pruebas\Ltspcie_placa_potencia\Draft1 (1).asc
+Rshunt Vshunt 0 0.3357
+R1 N003 Vshunt 2.2k
+C1 b N003 1n
+R3 N010 0 360
+R4 N002 Vset 6.82k
+V2 vcc 0 12
+V3 c 0 12
+Q1 N016 N017 N018 0 2N2222
+D1 N017 0 led1v8
+R2 vcc N017 470
+Q2 N004 N011 N016 0 2N2222
+Q3 N005 N012 N016 0 2N2222
+Q4 N006 N013 N016 0 2N2222
+R6 N012 Vshunt 0.5
+R7 N013 Vshunt 0.5
+R8 b N006 220
+R9 b N005 220
+R10 b N004 220
+R11 N018 0 33
+XU3 c N004 N011 TIP142
+XU4 c N005 N012 TIP142
+XU5 c N006 N013 TIP142
+Q5 N007 N014 N016 0 2N2222
+R12 N014 Vshunt 0.5
+R13 b N007 220
+XU1 c N007 N014 TIP142
+Q6 N008 N015 N016 0 2N2222
+R14 N015 Vshunt 0.5
+R15 b N008 220
+XU6 c N008 N015 TIP142
+R16 vcc N002 470
+D2 0 N002 BZX84C3V3
+R17 vcc N002 470
+R18 vcc N002 470
+R19 Vset N010 10k
+R20 N010 N010 0.01
+V1 0 N001 15
+V4 N009 0 15
+XU2 Vset N003 N009 N001 b LM358
+R5 N011 Vshunt 0.5
+R21 N011 Vshunt 0.5
+R§0.1 N012 Vshunt 0.5
+R23 N013 Vshunt 0.5
+R24 N014 Vshunt 0.5
+R25 N015 Vshunt 0.5
+.model D D
+.lib C:\Users\simon\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NPN NPN
+.model PNP PNP
+.lib C:\Users\simon\AppData\Local\LTspice\lib\cmp\standard.bjt
+.tran 0 100m 10m
+.model led1v8 d Vfwd=1.8 Ron=0.25 Epsilon=1
+.MODEL BZX84C3V3 D(IS=1.636E-15 N=1.028 RS=.13 IKF=1 XTI=3 EG=1.11 CJO=283.5E-12 M=.2019 VJ=.3905 FC=.5 BV=3.366 IBV=64.77E-3 TBV1=-.46E-3 TT=57.71E-9 Vpk=3.3 mfg=Philips type=zener)
+* Esto representa \nun potenciómetro de 10k.\nSi R20 vale 10k entonces\nVset es mínimo
+* Me faltan estas resistencias
+* 39K para 5V, 6.8k para 12V
+* 33 para 12V, 2.2 para 5V
+.lib ./TIP142.spice
+.lib LM358.MOD
+.backanno
+.end
