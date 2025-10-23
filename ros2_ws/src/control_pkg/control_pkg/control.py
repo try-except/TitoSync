@@ -17,14 +17,31 @@ class ControlNode(Node):
         self.publisher_ = self.create_publisher(String, 'control_output', 10)
         self.get_logger().info("Control node started, listening to 'target_reference'")
 
+        self.x = 0
+        self.y = 0
+        self.xt = 0
+        self.yt = 0
+
+
     def listener_callback(self, msg):
-        self.get_logger().info(f'Received target_reference: {msg.data}')
+        target_tuple = ast.literal_eval(msg.data)  # '(x, y, x1, y1)'
+        self.x, self.y, self.xt, self.yt = target_tuple
+        self.get_logger().info(f'Recibido: x={self.x}, y={self.y}, xt={self.x1}, yt={self.y1}')
 
         # Create a control message
         control_msg = String()
         control_msg.data = f"DC,50,S1,5,S2,5,S3,10"
         self.publisher_.publish(control_msg)
         self.get_logger().info(f'Published control_output: {control_msg.data}')
+
+    def control M_ang (self):
+        pass
+    def control M_avance (self):
+        pass
+    def control M_bajada(self):
+        pass
+    def control M_taladro(self):
+        pass
 
 def main(args=None):
     rclpy.init(args=args)
