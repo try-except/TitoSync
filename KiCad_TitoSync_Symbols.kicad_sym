@@ -1078,14 +1078,14 @@
 			(pin input line
 				(at 0 -12.7 0)
 				(length 7.62)
-				(name "ISP"
+				(name "ISN"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "12"
+				(number "13"
 					(effects
 						(font
 							(size 1.27 1.27)
@@ -1096,14 +1096,14 @@
 			(pin input line
 				(at 0 -15.24 0)
 				(length 7.62)
-				(name "ISN"
+				(name "ISP"
 					(effects
 						(font
 							(size 1.27 1.27)
 						)
 					)
 				)
-				(number "13"
+				(number "12"
 					(effects
 						(font
 							(size 1.27 1.27)
