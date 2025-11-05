@@ -18,14 +18,14 @@
       "zones": 0.6
     },
     "selection_filter": {
-      "dimensions": true,
-      "footprints": true,
-      "graphics": true,
-      "keepouts": true,
-      "lockedItems": false,
-      "otherItems": true,
-      "pads": true,
-      "text": true,
+      "dimensions": false,
+      "footprints": false,
+      "graphics": false,
+      "keepouts": false,
+      "lockedItems": true,
+      "otherItems": false,
+      "pads": false,
+      "text": false,
       "tracks": true,
       "vias": true,
       "zones": true
@@ -52,10 +52,11 @@
       "conflict_shadows",
       "shapes"
     ],
-    "visible_layers": "ffffffff_ffffffff_ffffffff_ffffffff",
+    "visible_layers": "00000000_00000000_0fffffff_ffffffff",
     "zone_display_mode": 0
   },
   "git": {
+    "repo_password": "",
     "repo_type": "",
     "repo_username": "",
     "ssh_key": ""
@@ -66,6 +67,8 @@
   },
   "net_inspector_panel": {
     "col_hidden": [
+      false,
+      false,
       false,
       false,
       false,
@@ -87,7 +90,9 @@
       6,
       7,
       8,
-      9
+      9,
+      10,
+      11
     ],
     "col_widths": [
       294,
@@ -99,7 +104,9 @@
       173,
       126,
       173,
-      934
+      173,
+      173,
+      173
     ],
     "custom_group_rules": [],
     "expanded_rows": [],
