@@ -7085,7 +7085,16 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Stackpole Electronics Inc"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
+			(at 45.72 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartNumber" "0805W8F1001T5E"
 			(at 45.72 180.34 0)
 			(effects
 				(font
@@ -7339,7 +7348,16 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Stackpole Electronics Inc"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
+			(at 139.7 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartNumber" "0805W8F3002T5E"
 			(at 139.7 49.53 0)
 			(effects
 				(font
@@ -7773,7 +7791,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "37821c65-7ba2-4bac-974f-376ab877ebee")
 		(property "Reference" "TP5"
 			(at 142.24 103.3779 0)
@@ -8192,7 +8210,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 109.22 177.8 0)
 			(effects
 				(font
@@ -8201,7 +8219,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 109.22 177.8 0)
 			(effects
 				(font
@@ -8232,7 +8250,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "50005df5-1467-4c16-8845-a68c79cf56e1")
 		(property "Reference" "TP11"
 			(at 144.78 135.1279 0)
@@ -8356,7 +8374,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 109.22 59.69 0)
 			(effects
 				(font
@@ -8365,7 +8383,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 109.22 59.69 0)
 			(effects
 				(font
@@ -8396,7 +8414,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "51dccb5c-57a9-4cb6-a14a-99acb3b57f50")
 		(property "Reference" "TP21"
@@ -8473,7 +8491,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "55fa8118-fdc0-4070-b055-b5e82a57b71b")
 		(property "Reference" "TP10"
 			(at 140.97 133.8579 0)
@@ -8549,7 +8567,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5687a2db-6102-4706-a6c4-f8e28af63b0e")
 		(property "Reference" "TP20"
@@ -8674,7 +8692,16 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Stackpole Electronics Inc"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
+			(at 45.72 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartNumber" "0805W8F1001T5E"
 			(at 45.72 62.23 0)
 			(effects
 				(font
@@ -8902,7 +8929,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "773b2b87-3b60-41a7-9349-4710422b5452")
 		(property "Reference" "TP19"
@@ -9093,7 +9120,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 109.22 119.38 0)
 			(effects
 				(font
@@ -9102,7 +9129,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 109.22 119.38 0)
 			(effects
 				(font
@@ -9133,7 +9160,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "7c546ab1-86b7-488c-a644-01009781d67d")
 		(property "Reference" "TP6"
@@ -9392,7 +9419,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "836edb42-a1db-4fa9-a57e-15d235eb1591")
 		(property "Reference" "TP13"
@@ -9609,7 +9636,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "8d17b6f3-7d01-4f87-8148-420e66e55207")
 		(property "Reference" "TP4"
 			(at 138.43 102.1079 0)
@@ -9685,7 +9712,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "8db93d78-f4a2-4690-be50-b6d72d624658")
 		(property "Reference" "TP16"
 			(at 140.97 164.3379 0)
@@ -9761,7 +9788,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "91ee626e-8675-4d55-85a8-34f35667aa8f")
 		(property "Reference" "TP17"
 			(at 144.78 165.6079 0)
@@ -9903,7 +9930,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9dbf1ca6-3a05-42b4-8440-e27fbfa84531")
 		(property "Reference" "TP3"
@@ -9980,7 +10007,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "9fb9d707-e36f-4d86-a36e-10f31ca2e437")
 		(property "Reference" "TP18"
@@ -10321,7 +10348,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 104.14 177.8 0)
 			(effects
 				(font
@@ -10330,7 +10357,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 104.14 177.8 0)
 			(effects
 				(font
@@ -10361,7 +10388,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a74009af-b338-4dad-b20e-848ef8bc5521")
 		(property "Reference" "TP8"
@@ -10438,7 +10465,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "ab84030f-48c3-4488-ac4a-e418b2d53270")
 		(property "Reference" "TP15"
@@ -10515,7 +10542,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "abde451d-c0ab-4832-aa76-b7d1fcd4c1fe")
 		(property "Reference" "TP1"
 			(at 140.97 88.1379 0)
@@ -10591,7 +10618,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "b2cebb29-1266-4ba6-bd93-7d8cbdc628a1")
 		(property "Reference" "TP14"
@@ -10799,7 +10826,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "bfc5adc4-14e3-41d7-ad62-649ad3612fe4")
 		(property "Reference" "TP12"
@@ -10924,7 +10951,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 104.14 59.69 0)
 			(effects
 				(font
@@ -10933,7 +10960,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 104.14 59.69 0)
 			(effects
 				(font
@@ -11415,7 +11442,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "RESI"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
 			(at 104.14 119.38 0)
 			(effects
 				(font
@@ -11424,7 +11451,7 @@
 				(hide yes)
 			)
 		)
-		(property "PartNumber" "MFCR1206FR100QHR"
+		(property "PartNumber" "1206W4F100LT5E"
 			(at 104.14 119.38 0)
 			(effects
 				(font
@@ -11455,7 +11482,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d221f7a3-3e07-4c7a-9b16-553d335f75d0")
 		(property "Reference" "TP7"
@@ -11532,7 +11559,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "d4908289-77c2-4896-af19-5f8051592b23")
 		(property "Reference" "TP9"
@@ -12181,7 +12208,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board no)
-		(dnp no)
+		(dnp yes)
 		(uuid "f0bea400-c4dd-4c1a-adc3-6673e1192aa2")
 		(property "Reference" "TP2"
 			(at 144.78 91.948 0)
@@ -12574,7 +12601,16 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "Stackpole Electronics Inc"
+		(property "Manufacturer" "     UNI-ROYAL(Uniroyal Elec) "
+			(at 45.72 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PartNumber" "0805W8F1001T5E"
 			(at 45.72 121.92 0)
 			(effects
 				(font
