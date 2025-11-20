@@ -1,6 +1,9 @@
 *.bak
+*-bak
 *-backups
+jlcpcb
+*.lck
+fp-info-cache
+report.txt
 *~
-~*
-*-cache
-FabOuts
+*.kicad_prl
