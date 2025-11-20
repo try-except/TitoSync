@@ -67,7 +67,8 @@ namespace
     const int PWM_MAX_DUTY = (1 << PWM_RES_BITS) - 1; // 255
 
     // ledc timer and channels for DC
-    const ledc_timer_t LEDC_TIMER = LEDC_TIMER_0;
+    // use an unused high-speed timer for the DC motor (avoid conflicts with stepper timers)
+    const ledc_timer_t LEDC_TIMER = LEDC_TIMER_3;
     const ledc_mode_t LEDC_MODE = LEDC_HIGH_SPEED_MODE;
     const int LEDC_TIMER_BIT = PWM_RES_BITS;
 
@@ -236,7 +237,7 @@ namespace
         .ch_ain2 = LEDC_CHANNEL_5,
         .ch_bin1 = LEDC_CHANNEL_6,
         .ch_bin2 = LEDC_CHANNEL_7,
-        .timer = LEDC_TIMER_1,
+        .timer = LEDC_TIMER_2,
         .mode = LEDC_LOW_SPEED_MODE,
         .default_duty = (STEPPER_PWM_MAX * 80) / 100,
         .step_delay_ms = 5
@@ -283,9 +284,16 @@ extern "C" void app_main()
     // init motor PWM BEFORE creating tasks (so move_DC_motor is ready)
     init_motor_pwm();
 
+    // quick hardware test: set DC motor PWM to 50% on IN2 for 5s so you can probe with scope
+    ESP_LOGI(TAG, "hardware test: move_DC_motor(50) for 5s");
+    move_DC_motor(50);              // forward @ 50% duty (IN2 PWM)
+    vTaskDelay(pdMS_TO_TICKS(5000)); // hold so you can see on scope
+    move_DC_motor(0);               // coast / stop after test
+    ESP_LOGI(TAG, "hardware test complete");
+
     // init steppers (configures timers & channels used by steppers)
     init_steppers();
-
+    
     // create queue (5 elements, each of size BUF_SIZE bytes for a string)
     m_string_queue = xQueueCreate(5, BUF_SIZE);
     if (m_string_queue == nullptr) {

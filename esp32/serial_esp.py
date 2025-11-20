@@ -3,7 +3,7 @@ import time
 
 ser = serial.Serial('/dev/ttyUSB0', 115200, timeout=1)
 for i in range(10):
-    message = f"0,5,5,10\n"
+    message = f"10,5,5,10\n"
     ser.write(message.encode('ascii'))
     time.sleep(1)
 

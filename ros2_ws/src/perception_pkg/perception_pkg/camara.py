@@ -1,6 +1,5 @@
 import cv2
 import numpy as np
-from funciones_auxiliares import linea_discontinua 
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor

@@ -21,6 +21,7 @@ setup(
     entry_points={
         'console_scripts': [
              'control = control_pkg.control:main',
+             'keyboard_control = control_pkg.keyboard_control:main',
         ],
     },
 )

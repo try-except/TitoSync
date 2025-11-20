@@ -39,7 +39,8 @@ class Centroide():
         cv2.setTrackbarPos("ksize", "image", self.ksize_init)
 
         # --- Cámara ---
-        self.cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+        idx = 3
+        self.cap = cv2.VideoCapture(idx, cv2.CAP_V4L2)  
         cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("frame", 640, 480)
         cv2.moveWindow("frame", 30, 100)
