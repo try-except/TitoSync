@@ -11,6 +11,9 @@ setup(
             ['resource/' + package_name]),
         ('share/' + package_name + '/launch', ['launch/bringup_launch.py']),
         ('share/' + package_name, ['package.xml']),
+        ('share/' + package_name, [
+            'perception_pkg/valores_lower_upper_refpoint.txt'
+        ]),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -21,7 +24,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'camara = perception_pkg.camara:main',
+            'camara = perception_pkg.camara_oak:main',
         ],
     },
 )

@@ -1,0 +1,3 @@
+[console_scripts]
+camara = perception_pkg.camara_oak:main
+
