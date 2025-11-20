@@ -4,7 +4,6 @@
 jlcpcb
 *.lck
 fp-info-cache
-fp-lib-table
 report.txt
 *~
 *.kicad_prl
