@@ -1,5 +1,5 @@
-lower: [0, 93, 45]
-upper: [7, 183, 255]
-punto_de_referencia: [356, 58]
-color_a_rastrear: [1, 138, 120]
+lower: [41, 157, 79]
+upper: [121, 247, 255]
+punto_de_referencia: [307, 111]
+color_a_rastrear: [81, 202, 154]
 ksize: 2

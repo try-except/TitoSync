@@ -7,7 +7,7 @@ from std_msgs.msg import String
 import threading
 import time
 import depthai as dai
-
+import math
 class Camara(Node):
     
     def __init__(self, archivo_valores="valores_lower_upper_refpoint.txt"):
@@ -59,7 +59,16 @@ class Camara(Node):
     
     def timer_callback(self):
         # Example tuple: (x, y)
-        target = (self.x, self.y)
+        dx = self.punto_de_referencia[0] - self.x 
+        dy = self.punto_de_referencia[1] - self.y
+        dist = math.sqrt(dx**2 + dy**2)
+        angulo_rad = math.atan2(dy, dx)
+        angulo_deg = 90 - math.degrees(angulo_rad)
+        if angulo_deg > 180:
+            angulo_deg -= 360
+        elif angulo_deg <= -180:
+            angulo_deg += 360
+        target = (self.x, self.y, dist, angulo_deg)
         msg = String()
         msg.data = str(target)  # publish as string for now
         self.publisher_.publish(msg)

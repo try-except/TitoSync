@@ -14,14 +14,21 @@ class Centroide():
         self.x = 0
         self.y = 0
         self.color1_hsv = np.array([0, 0, 0])
-        self.lower_init, self.upper_init, self.punto_de_referencia,self.color1_hsv, self.ksize_init = self.cargar_valores_desde_archivo(
-         "valores_lower_upper_refpoint.txt")
+
+        # ---- Load previous calibration file ----
+        self.lower_init, self.upper_init, self.punto_de_referencia, \
+        self.color1_hsv, self.ksize_init = self.cargar_valores_desde_archivo(
+            "valores_lower_upper_refpoint.txt"
+        )
+
         self.LowerColorError = np.array([-40, -45, -75])
         self.UpperColorError = np.array([40, 45, 75])
 
-        # --- Ventana de calibración ---
-        self.image = cv2.imread(r"C:\Users\palop\Desktop\U_pascal\proyecto_de_titulo\TitoSync\ros2_ws\src\perception_pkg\perception_pkg\hsv_color_map.png")
+        # ---- Load image (Linux-safe path) ----
+        package_dir = Path(__file__).resolve().parent
+        self.image = cv2.imread(str(package_dir / "hsv_color_map.png"))
 
+        # ---- GUI Setup ----
         cv2.namedWindow("image")
         cv2.resizeWindow("image", 540, 480)
         cv2.moveWindow("image", 700, 100)
@@ -42,31 +49,43 @@ class Centroide():
         cv2.setTrackbarPos("VMax", "image", self.upper_init[2])
         cv2.setTrackbarPos("ksize", "image", self.ksize_init)
 
-        # --- Cámara ---
-        
-        # --- Pipeline OAK ---
+        # ---- DepthAI Pipeline (Fixed) ----
+        print("Inicializando pipeline DepthAI...")
+
         self.pipeline = dai.Pipeline()
 
-        # Crear nodo de cámara
-        self.cam = self.pipeline.create(dai.node.Camera).build()
+        # Create a ColorCamera node and an XLinkOut to stream frames to the host.
+        cam = self.pipeline.create(dai.node.ColorCamera)
+        try:
+            cam.setBoardSocket(dai.CameraBoardSocket.RGB)
+        except Exception:
+            # Some devices/versions may not require or support setBoardSocket
+            pass
+        cam.setPreviewSize(640, 400)
+        cam.setInterleaved(False)
+        cam.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
 
-        # Crear salida (igual que en tu ejemplo funcional)
-        self.videoQueue = self.cam.requestOutput((640,400)).createOutputQueue()
+        xout = self.pipeline.create(dai.node.XLinkOut)
+        xout.setStreamName("video")
+        cam.preview.link(xout.input)
 
-        # Iniciar cámara
-        self.pipeline.start()
+        # Start device and create output queue for host
+        self.device = dai.Device(self.pipeline)
+        self.videoQueue = self.device.getOutputQueue(name="video", maxSize=4, blocking=False)
+
         cv2.namedWindow("frame", cv2.WINDOW_NORMAL)
         cv2.resizeWindow("frame", 640, 480)
         cv2.moveWindow("frame", 30, 100)
         cv2.setMouseCallback("frame", self._mouseEvent)
+
         self.ejecutar()
-        #self.thread = threading.Thread(target=self.ejecutar, daemon=True)
-        #self.thread.start()
 
 
 # --- Función para cargar valores previos ---
     def cargar_valores_desde_archivo(self, filename):
-            ruta_archivo = Path(r"C:\Users\palop\Desktop\U_pascal\proyecto_de_titulo\TitoSync\ros2_ws\src\perception_pkg\perception_pkg") / filename
+            ruta_archivo = Path("/home/diego/TitoSync/ros2_ws/src/perception_pkg/perception_pkg") / filename
+
+
             with open(ruta_archivo, "r") as file:
                 lines = file.readlines()
                 lower = np.array(eval(lines[0].split(":")[1].strip()))
@@ -207,7 +226,7 @@ class Centroide():
 
             lower = [hMin, sMin, vMin]
             upper = [hMax, sMax, vMax]
-            ruta_archivo = Path(r"C:\Users\palop\Desktop\U_pascal\proyecto_de_titulo\TitoSync\ros2_ws\src\perception_pkg\perception_pkg") / "valores_lower_upper_refpoint.txt"
+            ruta_archivo = Path("/home/diego/TitoSync/ros2_ws/src/perception_pkg/perception_pkg") / "valores_lower_upper_refpoint.txt"
             with open(ruta_archivo, "w") as f:
                 f.write(f"lower: {lower}\n")
                 f.write(f"upper: {upper}\n")
