@@ -16,9 +16,9 @@ class Camara(Node):
         #iniciar ros
         super().__init__('camara')
         self.publisher_ = self.create_publisher(String, 'target_reference', 10)
-        self.timer = self.create_timer(1.0, self.timer_callback)  # publish every second
+        self.timer = self.create_timer(0.10, self.timer_callback)  # publish every second
         self.get_logger().info("Camara node started, publishing to 'target_reference'")
-        self.image_rviz = self.create_publisher(Image, 'camera/image', 10)
+        #self.image_rviz = self.create_publisher(Image, 'camera/image', 10)
         #iniciar camara
         self.x = 0
         self.y = 0
@@ -93,7 +93,7 @@ class Camara(Node):
                 img_msg.is_bigendian = False
                 img_msg.step = frame.shape[1] * 3
                 img_msg.data = frame.tobytes()
-                self.image_rviz.publish(img_msg)
+                #self.image_rviz.publish(img_msg)
 
                 # Aplicar blur si ksize > 1
                 if self.ksize > 1:

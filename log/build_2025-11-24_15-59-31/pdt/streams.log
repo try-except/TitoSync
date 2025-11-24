@@ -1,0 +1,22 @@
+[0.327s] Invoking command in '/home/diego/TitoSync/build/pdt': /usr/bin/cmake /home/diego/TitoSync/esp32/PlatformIO/Projects/pdt -DCMAKE_INSTALL_PREFIX=/home/diego/TitoSync/install/pdt
+[0.348s] [31mCMake Error at CMakeLists.txt:2 (include):
+[0.348s]   include could not find requested file:
+[0.348s] 
+[0.348s]     /tools/cmake/project.cmake
+[0.348s] 
+[0.348s] [0m
+[0.419s] -- The C compiler identification is GNU 11.4.0
+[0.490s] -- The CXX compiler identification is GNU 11.4.0
+[0.495s] -- Detecting C compiler ABI info
+[0.546s] -- Detecting C compiler ABI info - done
+[0.550s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.551s] -- Detecting C compile features
+[0.551s] -- Detecting C compile features - done
+[0.553s] -- Detecting CXX compiler ABI info
+[0.612s] -- Detecting CXX compiler ABI info - done
+[0.619s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.619s] -- Detecting CXX compile features
+[0.619s] -- Detecting CXX compile features - done
+[0.619s] -- Configuring incomplete, errors occurred!
+[0.620s] See also "/home/diego/TitoSync/build/pdt/CMakeFiles/CMakeOutput.log".
+[0.623s] Invoked command in '/home/diego/TitoSync/build/pdt' returned '1': /usr/bin/cmake /home/diego/TitoSync/esp32/PlatformIO/Projects/pdt -DCMAKE_INSTALL_PREFIX=/home/diego/TitoSync/install/pdt

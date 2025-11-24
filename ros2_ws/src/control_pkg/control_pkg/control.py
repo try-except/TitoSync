@@ -24,13 +24,27 @@ class ControlNode(Node):
 
 
     def listener_callback(self, msg):
-        target_tuple = ast.literal_eval(msg.data)  # '(x, y, x1, y1)'
-        self.x, self.y, self.xt, self.yt = target_tuple
-        self.get_logger().info(f'Recibido: x={self.x}, y={self.y}, xt={self.x1}, yt={self.y1}')
+        # read msg and separate values (refx, refy, self.x, self.y, dist, angulo_deg), its a string
+        target_str = msg.data
+        target_tuple = eval(target_str)
+
+
+
+
+
+        self.x, self.y, self.xt, self.yt, dist, angle = target_tuple
+        self.get_logger().info(f'Recibido: x={self.x}, y={self.y}, xt={self.xt}, yt={self.yt}')
 
         # Create a control message
-        control_msg = String()
-        control_msg.data = f"DC,50,S1,5,S2,5,S3,10"
+        if dist < 40:
+            control_msg = String()
+            control_msg.data = "DC,0,S1,0,S2,0,S3,0"
+        else:
+            control_msg = String()
+            if angle >0:
+                control_msg.data = f"DC,50,S1,{int(int(dist)/6)},S2,5,S3,-10"
+            else:
+                control_msg.data = f"DC,50,S1,-{int(int(dist)/6)},S2,5,S3,10"
         self.publisher_.publish(control_msg)
         self.get_logger().info(f'Published control_output: {control_msg.data}')
 

@@ -25,6 +25,7 @@ setup(
     entry_points={
         'console_scripts': [
             'camara = perception_pkg.camara_oak:main',
+            'calibracion = perception_pkg.calibracion_oak_final:main',
         ],
     },
 )

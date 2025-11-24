@@ -1,0 +1,2 @@
+Invoking command in '/home/diego/TitoSync/build/pdt': /usr/bin/cmake /home/diego/TitoSync/esp32/PlatformIO/Projects/pdt -DCMAKE_INSTALL_PREFIX=/home/diego/TitoSync/install/pdt
+Invoked command in '/home/diego/TitoSync/build/pdt' returned '1': /usr/bin/cmake /home/diego/TitoSync/esp32/PlatformIO/Projects/pdt -DCMAKE_INSTALL_PREFIX=/home/diego/TitoSync/install/pdt
