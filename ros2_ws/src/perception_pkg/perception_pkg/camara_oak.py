@@ -4,10 +4,12 @@ import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from std_msgs.msg import String
+from sensor_msgs.msg import Image
 import threading
 import time
 import depthai as dai
 import math
+
 class Camara(Node):
     
     def __init__(self, archivo_valores="valores_lower_upper_refpoint.txt"):
@@ -16,7 +18,7 @@ class Camara(Node):
         self.publisher_ = self.create_publisher(String, 'target_reference', 10)
         self.timer = self.create_timer(1.0, self.timer_callback)  # publish every second
         self.get_logger().info("Camara node started, publishing to 'target_reference'")
-        
+        self.image_rviz = self.create_publisher(Image, 'camera/image', 10)
         #iniciar camara
         self.x = 0
         self.y = 0
@@ -59,8 +61,10 @@ class Camara(Node):
     
     def timer_callback(self):
         # Example tuple: (x, y)
-        dx = self.punto_de_referencia[0] - self.x 
-        dy = self.punto_de_referencia[1] - self.y
+        refx = self.punto_de_referencia[0]
+        refy = self.punto_de_referencia[1]
+        dx = refx - self.x 
+        dy = refy - self.y
         dist = math.sqrt(dx**2 + dy**2)
         angulo_rad = math.atan2(dy, dx)
         angulo_deg = 90 - math.degrees(angulo_rad)
@@ -68,7 +72,7 @@ class Camara(Node):
             angulo_deg -= 360
         elif angulo_deg <= -180:
             angulo_deg += 360
-        target = (self.x, self.y, dist, angulo_deg)
+        target = (refx, refy, self.x, self.y, dist, angulo_deg)
         msg = String()
         msg.data = str(target)  # publish as string for now
         self.publisher_.publish(msg)
@@ -79,6 +83,17 @@ class Camara(Node):
             while self.running:
                 in_frame = self.q.get()
                 frame = in_frame.getCvFrame()
+
+                # enviar imagen a rviz
+                img_msg = Image()
+                img_msg.header.stamp = self.get_clock().now().to_msg()
+                img_msg.height = frame.shape[0]
+                img_msg.width = frame.shape[1]
+                img_msg.encoding = 'bgr8'
+                img_msg.is_bigendian = False
+                img_msg.step = frame.shape[1] * 3
+                img_msg.data = frame.tobytes()
+                self.image_rviz.publish(img_msg)
 
                 # Aplicar blur si ksize > 1
                 if self.ksize > 1:

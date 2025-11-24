@@ -61,7 +61,7 @@ class Centroide():
         except Exception:
             # Some devices/versions may not require or support setBoardSocket
             pass
-        cam.setPreviewSize(640, 400)
+        cam.setPreviewSize(640, 480)
         cam.setInterleaved(False)
         cam.setColorOrder(dai.ColorCameraProperties.ColorOrder.BGR)
 
