@@ -7,3 +7,5 @@ fp-info-cache
 report.txt
 *~
 *.kicad_prl
+*.raw
+*.log
