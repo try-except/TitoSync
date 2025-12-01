@@ -1,6 +1,0 @@
-[31mCMake Error at CMakeLists.txt:2 (include):
-  include could not find requested file:
-
-    /tools/cmake/project.cmake
-
-[0m

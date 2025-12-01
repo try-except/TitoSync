@@ -1,4 +1,14 @@
-ros2_ws/build/
-ros2_ws/install/
-ros2_ws/log/
+build
+install
+log
 *.bak
+*-bak
+*-backups
+jlcpcb
+*.lck
+fp-info-cache
+report.txt
+*~
+*.kicad_prl
+*.raw
+*.log
