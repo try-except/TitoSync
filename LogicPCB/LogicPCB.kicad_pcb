@@ -5418,7 +5418,7 @@
 		(descr "Through hole straight pin header, 2x03, 2.54mm pitch, double rows")
 		(tags "Through hole pin header THT 2x03 2.54mm double row")
 		(property "Reference" "J4"
-			(at 1.27 -2.38 0)
+			(at 1.575 -1.96 0)
 			(layer "F.SilkS")
 			(uuid "100f35bb-678f-47b7-a887-3b46975bd5ec")
 			(effects
@@ -12618,8 +12618,8 @@
 		(at 94.8 156.9 -90)
 		(descr "Tactile switch, 6x6 mm, H4.3 mm, gullwing terminals, https://www.e-switch.com/wp-content/uploads/2024/03/TL3301.pdf")
 		(tags "SPST button straight")
-		(property "Reference" "SW1"
-			(at 0 -4.05 90)
+		(property "Reference" "RESET"
+			(at 0 4.2 270)
 			(layer "F.SilkS")
 			(uuid "bb6db029-dbc6-43e7-b786-231cf65ced7d")
 			(effects
@@ -21358,6 +21358,18 @@
 		(layer "Edge.Cuts")
 		(uuid "537e8633-0642-4779-9d7f-23d6c1c71161")
 	)
+	(gr_text "SCLK"
+		(at 119.4 144.2 270)
+		(layer "F.SilkS")
+		(uuid "00794171-a54e-4bf2-aa7b-5bce72c9bdbf")
+		(effects
+			(font
+				(size 0.85 0.85)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "SLEEP\nFAULT"
 		(at 103.2 122.535 0)
 		(layer "F.SilkS")
@@ -21490,6 +21502,18 @@
 			(justify left bottom)
 		)
 	)
+	(gr_text "MOSI"
+		(at 113.3 152.3 90)
+		(layer "F.SilkS")
+		(uuid "6100ec74-c392-4c18-88e2-136c87b55e99")
+		(effects
+			(font
+				(size 0.85 0.85)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
 	(gr_text "POWER ON"
 		(at 143.1 105.4 0)
 		(layer "F.SilkS")
@@ -21557,6 +21581,18 @@
 		(effects
 			(font
 				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "MISO"
+		(at 113.2 147.4 90)
+		(layer "F.SilkS")
+		(uuid "9f9cf1cf-4d56-437b-84d4-17ec1847e77f")
+		(effects
+			(font
+				(size 0.85 0.85)
 				(thickness 0.1)
 			)
 			(justify left bottom)
