@@ -1,3 +1,0 @@
-[console_scripts]
-coms = coms_pkg.coms:main
-
