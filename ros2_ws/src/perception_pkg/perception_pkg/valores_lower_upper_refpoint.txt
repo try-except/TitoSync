@@ -1,5 +1,0 @@
-lower: [-1, -1, -1]
-upper: [-1, -1, -1]
-punto_de_referencia: [165, 313]
-color_a_rastrear: [22, 71, 155]
-ksize: -1
